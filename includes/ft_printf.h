@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2023/12/20 23:38:12 by vafleith         ###   ########.fr       */
+/*   Created: 2023/12/20 23:27:19 by vafleith          #+#    #+#             */
+/*   Updated: 2023/12/20 23:34:09 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
-{
-	if (!format)
-		return 0;
-	while (*format)
-	{
-		ft_putchar(*format);
-		format++;
-	}
-}
+int ft_print(const char* format, ...);
+
+#endif
