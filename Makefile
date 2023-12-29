@@ -6,21 +6,20 @@
 #    By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 17:07:48 by vafleith          #+#    #+#              #
-#    Updated: 2023/12/29 17:51:21 by vafleith         ###   ########.fr        #
+#    Updated: 2023/12/29 18:05:37 by vafleith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
+SRC_DIR = src/
 INC_DIR = includes
 LIBFT = libft
-SRC_DIR = src/
-OBJ_DIR = obj/
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_printf.c
+SRCS = $(SRC_DIR)ft_printf.c
 
 OBJS = $(SRCS:%.c=%.o)
 

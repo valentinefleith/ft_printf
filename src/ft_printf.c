@@ -6,12 +6,12 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2023/12/29 17:02:13 by vafleith         ###   ########.fr       */
+/*   Updated: 2023/12/29 18:01:37 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "libft.h"
+#include "../includes/ft_printf.h"
+#include "../includes/libft.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -39,4 +39,9 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(arguments);
 	return (count);
+}
+
+int main(void)
+{
+	ft_printf("Hello\n");
 }
