@@ -6,7 +6,7 @@
 #    By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 17:07:48 by vafleith          #+#    #+#              #
-#    Updated: 2023/12/29 18:05:37 by vafleith         ###   ########.fr        #
+#    Updated: 2024/01/02 10:18:27 by vafleith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ INC_DIR = includes
 LIBFT = libft
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra
+#CFLAGS += -Werror
 
 SRCS = $(SRC_DIR)ft_printf.c
 

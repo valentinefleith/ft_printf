@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 23:27:19 by vafleith          #+#    #+#             */
-/*   Updated: 2023/12/23 00:06:26 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/02 10:14:59 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <stdarg.h>
 
-#include "libft.h"
+#include "../libft/libft.h"
 
 int ft_print(const char* format, ...);
 
