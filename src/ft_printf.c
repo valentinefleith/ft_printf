@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 10:44:23 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/02 11:03:14 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,18 @@ int ft_print_arg(char format, va_list arguments)
 	if (format == 'c')
 		return ft_print_char(va_arg(arguments, int));
 	if (format == '%')
-		return ft_print_char(va_arg(arguments, int));
+		return ft_print_char('%');
 	if (format == 's')
 		return ft_print_str(va_arg(arguments, char *));
+	if (format == 'd' || format == 'i')
+		return ft_print_str(ft_itoa(va_arg(arguments, int)));
 	return 0;
 		
 }
 
+#include <stdio.h>
 int	main(void)
 {
-	ft_printf("Hello %s\n", "ca va");
+	int ret_val = ft_printf("Hello %i\n", 14);
+	printf("%i\n", ret_val);
 }
