@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 12:58:35 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/02 13:03:35 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,11 @@ int	main(void)
 	int	ret_val;
 	int	real_val;
 
-	ret_val = ft_printf("Hello %i %s%s\n", -14, "lol", " yo");
-	real_val = printf("Hello %i %s%s\n", -14, "lol", " yo");
+	//int test;
+	
+	//test = 14;
+	ret_val = ft_printf("Hello %x\n", 45);
+	real_val = printf("Hello %x\n", 45);
 	if (ret_val == real_val)
 		printf("return value OK :)\n");
 	else

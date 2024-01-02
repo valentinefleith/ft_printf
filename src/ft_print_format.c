@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 10:37:54 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 12:57:58 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/02 13:02:06 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,10 @@ int	ft_print_nbr_base(unsigned long long nb, char *base, char format)
 	count = 0;
 	if (format == 'p')
 	{
-		if (nb)
+		if (nb){
 			count += ft_print_str("0x");
+			format = 'x';
+		}
 		else
 			return (ft_print_str("(nil)"));
 	}
