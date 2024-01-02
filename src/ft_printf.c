@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 10:34:03 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/02 10:44:23 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_printf(const char *format, ...)
 {
 	va_list	arguments;
 	int		count;
-	int		fd;
 
 	if (!format)
 		return (0);
@@ -32,10 +31,7 @@ int	ft_printf(const char *format, ...)
 			count += ft_print_arg(*format, arguments);
 		}
 		else
-		{
-			ft_putchar_fd(*format, 1);
-			count++;
-		}
+			count += ft_print_char(*format);
 		format++;
 	}
 	va_end(arguments);
@@ -45,15 +41,16 @@ int	ft_printf(const char *format, ...)
 int ft_print_arg(char format, va_list arguments)
 {
 	if (format == 'c')
-	{
-		ft_putchar_fd(va_arg(arguments, int), 1);
-		return 1;
-	}
+		return ft_print_char(va_arg(arguments, int));
+	if (format == '%')
+		return ft_print_char(va_arg(arguments, int));
+	if (format == 's')
+		return ft_print_str(va_arg(arguments, char *));
 	return 0;
 		
 }
 
 int	main(void)
 {
-	ft_printf("Hello %c\n", 'a');
+	ft_printf("Hello %s\n", "ca va");
 }
