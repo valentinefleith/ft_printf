@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 12:00:02 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/02 12:05:48 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ int ft_print_arg(char format, va_list arguments)
 #include <stdio.h>
 int	main(void)
 {
-	int ret_val = ft_printf("Hello %i\n", -14);
-	int real_val = printf("Hello %i\n", -14);
+	int ret_val = ft_printf("Hello %i %s\n", -14, "lol");
+	int real_val = printf("Hello %i %s\n", -14, "lol");
 	if (ret_val == real_val)
 		printf("return value OK :)\n");
 	else
