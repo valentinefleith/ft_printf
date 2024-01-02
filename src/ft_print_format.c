@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 10:37:54 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 11:00:10 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/02 11:53:24 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,32 @@ int ft_print_str(char *s)
 	}
 	return i;
 }
+
+int ft_print_unsigned(int nb)
+{
+	int count;
+
+	count = 0;
+	if (nb < 10)
+		count += ft_print_char(nb + '0');
+	else
+	{
+		count += ft_print_unsigned(nb / 10);
+		count += ft_print_unsigned(nb % 10);
+	}
+	return (count);
+}
+
+int ft_print_nbr(int nb)
+{
+	int count;
+	
+	count = 0;
+	if (nb < 0)
+	{
+		count += ft_print_char('-');
+		nb *= -1;
+	}
+	return count + ft_print_unsigned(nb);
+}
+

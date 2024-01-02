@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 11:03:14 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/02 12:00:02 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int ft_print_arg(char format, va_list arguments)
 	if (format == 's')
 		return ft_print_str(va_arg(arguments, char *));
 	if (format == 'd' || format == 'i')
-		return ft_print_str(ft_itoa(va_arg(arguments, int)));
+		return ft_print_nbr(va_arg(arguments, int));
 	return 0;
 		
 }
@@ -55,6 +55,10 @@ int ft_print_arg(char format, va_list arguments)
 #include <stdio.h>
 int	main(void)
 {
-	int ret_val = ft_printf("Hello %i\n", 14);
-	printf("%i\n", ret_val);
+	int ret_val = ft_printf("Hello %i\n", -14);
+	int real_val = printf("Hello %i\n", -14);
+	if (ret_val == real_val)
+		printf("return value OK :)\n");
+	else
+		printf("wrong return value. Expected %i, got %i\n", real_val, ret_val);
 }
