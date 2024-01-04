@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 23:27:19 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/04 14:21:41 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/04 17:02:48 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_printf(const char *format, ...);
 
 int	ft_print_char(char c);
 int	ft_print_str(char *s);
-int	ft_print_unsigned(int nb);
+int	ft_print_unsigned(unsigned int nb);
 int	ft_print_nbr(int nb);
 int	ft_print_nbr_base(unsigned long long nb, char *base, char format);
 

@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/04 14:22:51 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/04 17:03:54 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,11 @@ int	main(void)
 	int	ret_val;
 	int	real_val;
 
-	int test;
+	unsigned int test;
 	
-	test = 14;
-	ret_val = ft_printf("Hello %p\n", &test);
-	real_val = printf("Hello %p\n", &test);
+	test = 2147483648;
+	ret_val = ft_printf("Hello %u\n", test);
+	real_val = printf("Hello %u\n", test);
 	if (ret_val == real_val)
 		printf("return value OK :)\n");
 	else

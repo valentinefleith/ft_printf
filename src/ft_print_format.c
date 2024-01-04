@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 10:37:54 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/04 16:54:09 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/04 17:02:30 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_print_str(char *s)
 	return (i);
 }
 
-int	ft_print_unsigned(int nb)
+int	ft_print_unsigned(unsigned int nb)
 {
 	int	count;
 
