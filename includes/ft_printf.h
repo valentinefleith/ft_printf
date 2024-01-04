@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 23:27:19 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 12:46:32 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/04 14:21:41 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # define LOWER_HEX "0123456789abcdef"
 # define UPPER_HEX "0123456789ABCDEF"
 
-int	ft_print(const char *format, ...);
+int	ft_printf(const char *format, ...);
 
 int	ft_print_char(char c);
 int	ft_print_str(char *s);
