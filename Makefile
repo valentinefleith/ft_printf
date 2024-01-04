@@ -6,7 +6,7 @@
 #    By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 17:07:48 by vafleith          #+#    #+#              #
-#    Updated: 2024/01/02 10:18:27 by vafleith         ###   ########.fr        #
+#    Updated: 2024/01/04 14:10:34 by vafleith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,11 +43,14 @@ $(NAME): $(OBJS)
 clean:
 	@echo Cleaning up object files
 	@rm -f $(OBJS)
+	@make clean -C $(LIBFT)
 
 .PHONY: fclean
 fclean: clean
 	@echo Cleaning up printf
 	@rm -rf $(NAME)
+	@echo Cleaning up libft
+	@rm -f $(LIBFT)/libft.a
 
 .PHONY: re
 re: fclean all
