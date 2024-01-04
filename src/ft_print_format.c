@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 10:37:54 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/02 13:02:06 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/04 14:17:53 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,11 @@ int	ft_print_nbr_base(unsigned long long nb, char *base, char format)
 	}
 	base_length = ft_strlen(base);
 	if (nb < base_length)
-		count += ft_print_char(base[nb]);
+		count += ft_print_char(base[nb % base_length]);
 	else
 	{
 		count += ft_print_nbr_base(nb / base_length, base, format);
-		count += ft_print_nbr_base(nb & base_length, base, format);
+		count += ft_print_nbr_base(nb % base_length, base, format);
 	}
 	return (count);
 }
