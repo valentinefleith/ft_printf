@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 10:37:54 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/04 14:17:53 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/04 16:54:09 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_print_str(char *s)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ft_print_str("(null)");
 	while (s[i])
 	{
 		write(1, s + i, 1);
