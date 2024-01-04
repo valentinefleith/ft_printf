@@ -6,7 +6,7 @@
 #    By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 17:07:48 by vafleith          #+#    #+#              #
-#    Updated: 2024/01/04 14:26:58 by vafleith         ###   ########.fr        #
+#    Updated: 2024/01/04 16:44:12 by vafleith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CC = cc
 CFLAGS = -Wall -Wextra
 CFLAGS += -Werror
 
-SRCS = $(SRC_DIR)ft_printf.c
+SRCS = $(SRC_DIR)ft_printf.c $(SRC_DIR)ft_print_format.c
 
 OBJS = $(SRCS:%.c=%.o)
 
@@ -37,7 +37,7 @@ $(NAME): $(OBJS)
 
 %.o : %.c
 	@echo Compiling $<
-	@$(CC) $(CFLAGS) $(INC_DIR) -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 .PHONY: clean
 clean:
