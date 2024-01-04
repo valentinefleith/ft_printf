@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/04 14:19:00 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/04 14:22:51 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	ft_print_arg(char format, va_list arguments)
 				LOWER_HEX, format));
 	return (0);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -79,3 +79,4 @@ int	main(void)
 	else
 		printf("wrong return value. Expected %i, got %i\n", real_val, ret_val);
 }
+*/
