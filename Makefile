@@ -6,7 +6,7 @@
 #    By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 17:07:48 by vafleith          #+#    #+#              #
-#    Updated: 2024/01/05 15:16:11 by vafleith         ###   ########.fr        #
+#    Updated: 2024/01/05 17:57:47 by vafleith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ CC = cc
 CFLAGS = -Wall -Wextra
 CFLAGS += -Werror
 CFLAGS += -I$(INC_DIR)
+CFLAGS += -Ilibft
 
 SRCS = $(SRC_DIR)/ft_printf.c $(SRC_DIR)/ft_print_format.c
 
@@ -41,6 +42,7 @@ $(BUILD_DIR)/%.o : %.c
 	@echo Compiling $<
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c $< -o $@
+
 
 .PHONY: clean
 clean:
