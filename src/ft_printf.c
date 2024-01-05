@@ -6,7 +6,7 @@
 /*   By: vafleith <vafleith@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:54:08 by vafleith          #+#    #+#             */
-/*   Updated: 2024/01/04 17:03:54 by vafleith         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:00:45 by vafleith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,22 +61,25 @@ int	ft_print_arg(char format, va_list arguments)
 				LOWER_HEX, format));
 	return (0);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
-{
-	int	ret_val;
-	int	real_val;
-
-	unsigned int test;
-	
-	test = 2147483648;
-	ret_val = ft_printf("Hello %u\n", test);
-	real_val = printf("Hello %u\n", test);
-	if (ret_val == real_val)
-		printf("return value OK :)\n");
-	else
-		printf("wrong return value. Expected %i, got %i\n", real_val, ret_val);
-}
-*/
+//#include <stdio.h>
+//
+//int	main(void)
+//{
+//	int	ret_val;
+//	int	real_val;
+//
+//	//unsigned int test;
+//	
+//	//test = 2147483648;
+//	char *str= NULL;
+//	ret_val = ft_printf("Hello %p\n", str);
+//	real_val = printf("Hello %p\n", str);
+//	ret_val = ft_printf("Hello %s\n", str);
+//	real_val = printf("Hello %s\n", str);
+//	if (ret_val == real_val)
+//		printf("return value OK :)\n");
+//	else
+//		printf("wrong return value. Expected %i, got %i\n", real_val, ret_val);
+//
+//}
