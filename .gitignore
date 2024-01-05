@@ -4,3 +4,4 @@ printfTester
 ft_printf_tester
 *.a
 *.o
+printf-unit-test
