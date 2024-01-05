@@ -24,7 +24,7 @@ int	ft_print_str(char *s)
 
 	i = 0;
 	if (!s)
-		return ft_print_str("(null)");
+		return (ft_print_str("(null)"));
 	while (s[i])
 	{
 		write(1, s + i, 1);
@@ -69,7 +69,8 @@ int	ft_print_nbr_base(unsigned long long nb, char *base, char format)
 	count = 0;
 	if (format == 'p')
 	{
-		if (nb){
+		if (nb)
+		{
 			count += ft_print_str("0x");
 			format = 'x';
 		}
